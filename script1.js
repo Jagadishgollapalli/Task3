@@ -1,4 +1,4 @@
-var request=new XMLHttpRequest();
+dvar request=new XMLHttpRequest();
 request.open("GET","https://restcountries.eu/rest/v2/all",true);
 request.send();
 request.onload=function(){
@@ -7,7 +7,7 @@ request.onload=function(){
         try{
             var lang=data[i].latlng;
         var name=data[i].name;
-        open(name,...lang)
+        openwd(name,...lang)
         }
         catch (e) {
             console.log('Invalid co-ordinate data for country: ' + name + ' ' + e.message);
@@ -16,7 +16,7 @@ request.onload=function(){
     }
 }
 
-var open = function (name, lat, lang) {
+var openwd = function (name, lat, lang) {
 	var request = new XMLHttpRequest();
 	var url =
 		'https://api.openweathermap.org/data/2.5/weather?lat=' +
